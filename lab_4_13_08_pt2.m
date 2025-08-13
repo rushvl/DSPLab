@@ -1,3 +1,6 @@
+% peak value for vowels
+%take 2d dft of an example and calculate
+
 rushil = audiorecorder();
 
 disp("Start Speaking")
