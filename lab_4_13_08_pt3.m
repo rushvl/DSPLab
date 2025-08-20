@@ -5,7 +5,7 @@ phases      = [-pi/2, pi/3, 0, -pi/3, pi/2];
 
 % Sampling settings
 Fs = 8000;         % Sampling frequency (Hz)
-T  = 1;            % Signal duration (seconds)
+T  = 0.05;            % Signal duration (seconds)
 t  = 0:1/Fs:T;     % Time vector
 
 % Reconstruct the signal
@@ -21,12 +21,12 @@ x = x / max(abs(x));
 sound(x, Fs);
 
 % Optional: Save to file
-audiowrite('BAT_signal.wav', x, Fs);
+audiowrite('signal.wav', x, Fs);
 
 % Plot the waveform
 figure;
 plot(t, x);
 xlabel('Time (s)');
 ylabel('Amplitude');
-title('Reconstructed BAT Signal');
+title('Reconstructed Signal');
 grid on;

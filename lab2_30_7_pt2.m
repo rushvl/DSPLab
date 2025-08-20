@@ -1,4 +1,4 @@
-img = imread("C:\Users\rushi\Pictures\4.1.05.tiff");
+img = imread("https://sipi.usc.edu/database/misc/4.1.05.tiff");
 
 %convert to grayscale
 input_image = rgb2gray(img);
@@ -36,14 +36,22 @@ filtered_image = uint8(filtered_image);
 horizontal_edges = uint8(horizontal_edges); 
 vertical_edges = uint8(vertical_edges); 
 
-imshow([input_image,filtered_image])
 
 % Display the horizontal and vertical edge images
 figure;
-subplot(1, 2, 1);
+
+subplot(1,4,1);
+imshow(uint8(input_image));
+title('Original');
+
+subplot(1,4,2);
+imshow(filtered_image);
+title('Filtered')
+
+subplot(1,4,3);
 imshow(horizontal_edges);
 title('Horizontal Edges');
 
-subplot(1, 2, 2);
+subplot(1,4,4);
 imshow(vertical_edges);
 title('Vertical Edges');

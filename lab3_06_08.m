@@ -22,7 +22,7 @@ function noisy_img = add_salt_pepper_noise(img, noise_density)
     noisy_img(rand_indices(half+1:end)) = 255; % salt
 end
 
-noise_density = 0.50;
+noise_density = 0.10;
 noisy_grey = add_salt_pepper_noise(grey, noise_density);
 
 box_filter_matrix = [1,1,1;1,1,1;1,1,1]/9;

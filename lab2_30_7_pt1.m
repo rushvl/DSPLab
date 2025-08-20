@@ -1,4 +1,4 @@
-x%sinusoid of length n
+%sinusoid of length n
 %randn of length n
 %add both
 %apply moving average filter on them by using a window of length m
